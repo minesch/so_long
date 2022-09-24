@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 17:10:51 by azakarya          #+#    #+#             */
-/*   Updated: 2022/05/07 20:06:22 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/09/24 21:00:40 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	while (s2 && s2[j])
 		str[i++] = s2[j++];
 	str[i] = '\0';
-	free(s1);
+	//free(s1);
 	return (str);
 }
 

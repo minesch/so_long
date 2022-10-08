@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 17:10:51 by azakarya          #+#    #+#             */
-/*   Updated: 2022/09/24 21:00:40 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/09/25 18:53:43 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlen(char *s)
 	return (x);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_gnl_strjoin(char *s1, char *s2)
 {
 	char	*str;
 	size_t	i;
@@ -39,7 +39,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	while (s2 && s2[j])
 		str[i++] = s2[j++];
 	str[i] = '\0';
-	//free(s1);
+	free(s1);
 	return (str);
 }
 

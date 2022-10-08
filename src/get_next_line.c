@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 17:10:47 by azakarya          #+#    #+#             */
-/*   Updated: 2022/08/25 21:14:02 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/09/25 18:54:08 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*get_next_line(int fd)
 		if (!saver)
 			saver = ft_strdup(buf);
 		else
-			saver = ft_strjoin(saver, buf);
+			saver = ft_gnl_strjoin(saver, buf);
 		if (ft_strchr(buf, '\n') || count == 0)
 			break ;
 	}

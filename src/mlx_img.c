@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 18:19:25 by azakarya          #+#    #+#             */
-/*   Updated: 2022/09/24 21:41:33 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/09/25 19:10:50 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	render_img(int *arr, t_game *game)
 	char	object;
 
 	object = arr[0];
-	y = arr[1] * 49;
-	x = arr[2] * 49;
+	y = arr[1] * 50;
+	x = arr[2] * 50;
 	mlx_put_image_to_window(game->mlx, game->win, game->img.bg, x, y);
 	if (object == '1')
 		mlx_put_image_to_window(game->mlx, game->win, game->img.wall, x, y);
@@ -64,24 +64,22 @@ void	render(t_game *game)
 	char	*s;
 	char	*itoa;
 
-	i = 0;
-	while (game->parsing.map[i])
+	i = -1;
+	while (game->parsing.map[++i])
 	{
-		j = 0;
-		while (game->parsing.map[i][j])
+		j = -1;
+		while (game->parsing.map[i][++j])
 		{
 			arr[0] = game->parsing.map[i][j];
 			arr[1] = i;
 			arr[2] = j;
 			render_img(arr, game);
-			j++;
 		}
-		i++;
 	}
 	itoa = ft_itoa(game->count);
 	s = ft_strjoin("Move: ", itoa);
 	free(itoa);
-	mlx_string_put(game->mlx, game->win, 10, 10, rgb(0, 255, 0), s);
+	mlx_string_put(game->mlx, game->win, 20, 30, rgb(0, 255, 0), s);
 	free(s);
 }
 

@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 01:00:01 by azakarya          #+#    #+#             */
-/*   Updated: 2022/09/24 21:05:34 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/09/28 20:46:35 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ void	error(t_parsing *sl, int indicate)
 	if (indicate == 7)
 		write(2, "...ERROR...\n...FILE_DOES_NOT_EXISTS...\n", 39);
 	sl->i = 0;
-	guard_free_map(&sl->map);
+	if (indicate != 7)
+		guard_free_map(&sl->map);
 	exit(1);
 }
 
@@ -83,4 +84,24 @@ int	get_coin(char **map)
 		++i;
 	}
 	return (count);
+}
+
+char	*ft_strjoin(char *s1, char *s2)
+{
+	char	*str;
+	size_t	i;
+	size_t	j;
+
+	str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	i = 0;
+	j = 0;
+	while (s1 && s1[i])
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	while (s2 && s2[j])
+		str[i++] = s2[j++];
+	str[i] = '\0';
+	return (str);
 }

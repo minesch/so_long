@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 21:29:35 by azakarya          #+#    #+#             */
-/*   Updated: 2022/09/24 19:10:06 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/09/25 18:55:17 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ struct s_game
 };
 
 char	**map_matrix(int s_count, int fd);
+char	*ft_strjoin(char *s1, char *s2);
 int		valid_name(char *str);
 int		string_count(char *path);
 
@@ -113,5 +114,6 @@ int		rendering(t_game *game);
 void	render(t_game *game);
 void	render_img(int *arr, t_game *game);
 char	*ft_itoa(int n);
+int		input(int key, t_game *game);
 
 #endif

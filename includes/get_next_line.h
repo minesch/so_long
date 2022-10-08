@@ -6,7 +6,7 @@
 /*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 17:10:44 by azakarya          #+#    #+#             */
-/*   Updated: 2022/05/07 20:09:00 by azakarya         ###   ########.fr       */
+/*   Updated: 2022/09/25 18:56:24 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 char	*get_next_line(int fd);
 char	*ft_strchr(char *s, int c);
-char	*ft_strjoin(char *s1, char *s2);
+char	*ft_gnl_strjoin(char *s1, char *s2);
 char	*ft_substr(char *s, unsigned int start, size_t len);
 char	*ft_strdup(char *s1);
 size_t	ft_strlen(char *s);
